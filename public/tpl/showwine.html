@@ -1,0 +1,14 @@
+<div class=" row" ui-view>
+    <div class=" col-md-12">
+<div class="col-md-3" ng-repeat="data in Allwines">
+<a href="#/wines/findone/{{data._id}}"  style="text-align: center;">
+    <img src="pics/{{data.picture}}" alt="" style="height: 200px ; width: 150px; margin-left: 30px;">
+    <h5 style="text-align: center">{{data.name}}</h5>
+    <h5 style="text-align: center">{{data.year}}</h5>
+    <h5 style="text-align: center">{{data.country}}</h5>
+
+    <i class="icon-globe"></i>
+</a>
+</div>
+    </div>
+</div>

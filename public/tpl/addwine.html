@@ -1,0 +1,129 @@
+<div class="row-fluid" >
+
+    <form class="form-horizontal span12">
+
+        <fieldset>
+
+            <legend>Wine Details</legend>
+            <br/>
+
+            <div class="row">
+                <div class="col-md-8">
+
+                    <div class="control-group">
+                        <label for="wineId" class="control-label">Id:</label>
+
+                        <div class="controls">
+                            <input id="wineId" ng-model="Onewine._id" class="form-control" name="id" type="text" value="{{Onewine._id}}"
+                                   disabled/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="name" class="control-label">Name:</label>
+
+                        <div class="controls">
+                            <input type="text" ng-model="Onewine.name"  class="form-control" id="name" name="name" value="{{Onewine.name}}"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="grapes" class="control-label">Grapes:</label>
+
+                        <div class="controls">
+                            <input type="text" class="form-control" ng-model="Onewine.grapes"  id="grapes" name="grapes" value="{{Onewine.grapes}}"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="country" class="control-label">Country:</label>
+
+                        <div class="controls">
+                            <input type="text" class="form-control" ng-model="Onewine.country"  id="country" name="country" value="{{Onewine.country}}"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="region" class="control-label">Region:</label>
+
+                        <div class="controls">
+
+                            <input type="text" class="form-control" ng-model="Onewine.region"  id="region" name="region" value="{{Onewine.region}}"/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="region" class="control-label">Picture:</label>
+
+                        <div class="controls">
+                            <input type="text" class="form-control" ng-model="Onewine.picture" value="{{Onewine.picture}}"  id="region" name="picture" >
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="control-group">
+                        <label for="year" class="control-label">Year:</label>
+
+                        <div class="controls">
+                            <select  class="form-control" ng-model="Onewine.year"  id="year" name="year" value="{{Onewine.year}}">
+                                <option>2010
+                               </option>
+                                <option>
+                                2011</option>
+                                <option>
+                              2010</option>
+                                <option>
+                               2009</option>
+                                <option>
+                                2008</option>
+                                <option>
+                                2007</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="description" class="control-label">Notes:</label>
+
+                        <div class="controls">
+                            <textarea id="description" value="{{Onewine.description}}" ng-model="Onewine.description"   class="form-control" name="description" style="width: 90%;" rows="6"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="well" style="width: 180px;text-align: center;width:50%;margin: 0px auto;">
+                        <p><img id="picture" width="150" src="pics/{{Onewine.picture}}"/></p>
+                        <p style="color:#999;">To change the picture, drag a new picture from your file system onto the box above.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class=""col-md-12" class="form-actions">
+        <br/>
+
+            <a href="" ng-click="saveWine(Onewine)" class="btn btn-primary save">Save</a>
+            <a href=""  ng-click="DeleteWine(Onewine)" class="btn btn-primary delete">Delete</a>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="row status-bar">
+    <div class="span12">
+        <div class="alert alert-success" style="display: none">
+            <b>Success!</b> Wine saved successfully
+        </div>
+    </div>
+</div>
